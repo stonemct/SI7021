@@ -23,6 +23,7 @@ This program is licensed under the GNU GPL v2
 typedef struct si7021_env {
     int celsiusHundredths;
     int fahrenheitHundredths;
+    int humidityPercent;
     unsigned int humidityBasisPoints;
 } si7021_env;
 
