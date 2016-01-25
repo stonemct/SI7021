@@ -130,6 +130,7 @@ struct si7021_env SI7021::getHumidityAndTemperature() {
     si7021_env ret = {0, 0, 0};
     ret.humidityBasisPoints      = getHumidityBasisPoints();
     ret.celsiusHundredths        = _getCelsiusPostHumidity();
+    ret.humidityPercent          = getHumidityPercent ();
     ret.fahrenheitHundredths     = (1.8 * ret.celsiusHundredths) + 3200;
     return ret;
 }
